@@ -1,0 +1,16 @@
+"TestStep": {
+            "Properties": {
+                "ActionOnFailure": "CONTINUE",
+                "HadoopJarStep": {
+                    "Args": [
+                        "s3://hive-vita/Step/load_clean.sh"
+                    ],
+                    "Jar": "s3://us-east-1.elasticmapreduce/libs/script-runner/script-runner.jar"
+                },
+                "JobFlowId": {
+                    "Ref": "cluster"
+                },
+                "Name": "TestStep"
+            },
+            "Type": "AWS::EMR::Step"
+        }
